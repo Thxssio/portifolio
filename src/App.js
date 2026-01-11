@@ -13,6 +13,7 @@ import TuneDrop from "./components/TuneDrop/TuneDrop";
 import Stories from "./components/Stories/Stories";
 import StoryDetail from "./components/Stories/StoryDetail";
 import NotFound from "./components/NotFound";
+import ObsidianCanvas from "./components/Autoconhecimento/ObsidianCanvas";
 
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
@@ -23,7 +24,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
-const isolatedRoutes = ["/portal"];
+const isolatedRoutes = ["/portal", "/autoconhecimento"];
 
 function AppRoutes() {
   const location = useLocation();
@@ -44,6 +45,7 @@ function AppRoutes() {
         <Route path="/stories/:slug" element={<StoryDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/autoconhecimento" element={<ObsidianCanvas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/portal" element={<Portal />} />
         <Route path="*" element={<NotFound />} />
